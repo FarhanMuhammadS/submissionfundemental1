@@ -24,10 +24,10 @@ class _SplashPageState extends State<SplashPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.network(
+            Image.asset(
               'assets/logoresto.jpg',
-              width: 500,
-              height: 250,
+              width: 300,
+              height: 150,
               fit: BoxFit.cover,
             ),
             Text('Restauranku')

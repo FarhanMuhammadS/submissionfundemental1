@@ -13,6 +13,7 @@ class DetailScreen extends StatelessWidget {
         title: Text(restorans.name),
       ),
       body: ListView(
+        shrinkWrap: true,
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -36,8 +37,8 @@ class DetailScreen extends StatelessWidget {
               Text(
                 restorans.city,
                 style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 35,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 20,
                     color: Colors.blueAccent),
               ),
               Text(restorans.rating),
@@ -46,7 +47,7 @@ class DetailScreen extends StatelessWidget {
                 child: Text(
                   restorans.description,
                   maxLines: 15,
-                  textAlign: TextAlign.center,
+                  textAlign: TextAlign.start,
                   style: TextStyle(
                     fontSize: 18,
                     color: Colors.black,
@@ -58,7 +59,7 @@ class DetailScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: Text(
-              'Menu',
+              'Menu Food',
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
@@ -70,32 +71,313 @@ class DetailScreen extends StatelessWidget {
           ),
           Row(
             children: [
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Column(
-                  children: [
-                    Image.network(
-                      'assets/bebek.jpg',
-                      width: 100,
-                      height: 50,
-                      fit: BoxFit.cover,
-                    ),
-                    Text("Bebek crepes"),
-                  ],
-                ),
-              ),
-              SizedBox(
-                width: 10,
-              ),
               Column(
                 children: [
-                  Image.network(
-                    'assets/eskrim.jpg',
-                    width: 100,
-                    height: 50,
-                    fit: BoxFit.cover,
+                  Text(
+                    'Makanan',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700,
+                    ),
                   ),
-                  Text("Es Krim"),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      width: 100,
+                      height: 30,
+                      color: Colors.blue,
+                      child: Center(
+                        child: Text(
+                          'Paket rosemary',
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Container(
+                    width: 100,
+                    height: 30,
+                    color: Colors.blue,
+                    child: Center(
+                      child: Text(
+                        'Toastie salmon',
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Container(
+                    width: 100,
+                    height: 30,
+                    color: Colors.blue,
+                    child: Center(
+                      child: Text(
+                        'Toastie salmon',
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Container(
+                    width: 100,
+                    height: 30,
+                    color: Colors.blue,
+                    child: Center(
+                      child: Text(
+                        'Bebek crepes',
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Container(
+                    width: 100,
+                    height: 30,
+                    color: Colors.blue,
+                    child: Center(
+                      child: Text(
+                        'Salad lengkeng',
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Column(
+                    children: [
+                      Text(
+                        'Minuman',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                      SizedBox(height: 5,),
+                      Container(
+                        width: 100,
+                        height: 30,
+                        color: Colors.blue,
+                        child: Center(
+                          child: Text(
+                            'Es Krim',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                       SizedBox(height: 5,),
+                      Container(
+                        width: 100,
+                        height: 30,
+                        color: Colors.blue,
+                        child: Center(
+                          child: Text(
+                            'Sirup',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                        SizedBox(height: 5,),
+                      Container(
+                        width: 100,
+                        height: 30,
+                        color: Colors.blue,
+                        child: Center(
+                          child: Text(
+                            'Jus Apel',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                       SizedBox(height: 5,),
+                      Container(
+                        width: 100,
+                        height: 30,
+                        color: Colors.blue,
+                        child: Center(
+                          child: Text(
+                            'Jus Jeruk',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                       SizedBox(height: 5,),
+                      Container(
+                        width: 100,
+                        height: 30,
+                        color: Colors.blue,
+                        child: Center(
+                          child: Text(
+                            'Cokelat Panas',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                       SizedBox(height: 5,),
+                      Container(
+                        width: 100,
+                        height: 30,
+                        color: Colors.blue,
+                        child: Center(
+                          child: Text(
+                            'Air',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                       SizedBox(height: 5,),
+                      Container(
+                        width: 100,
+                        height: 30,
+                        color: Colors.blue,
+                        child: Center(
+                          child: Text(
+                            'Es Kopi',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                       SizedBox(height: 5,),
+                      Container(
+                        width: 100,
+                        height: 30,
+                        color: Colors.blue,
+                        child: Center(
+                          child: Text(
+                            'Jus Alpukat',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                       SizedBox(height: 5,),
+                      Container(
+                        width: 100,
+                        height: 30,
+                        color: Colors.blue,
+                        child: Center(
+                          child: Text(
+                            'Jus Mangga',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                       SizedBox(height: 5,),
+                      Container(
+                        width: 100,
+                        height: 30,
+                        color: Colors.blue,
+                        child: Center(
+                          child: Text(
+                            'Teh Manis',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                       SizedBox(height: 5,),
+                      Container(
+                        width: 100,
+                        height: 30,
+                        color: Colors.blue,
+                        child: Center(
+                          child: Text(
+                            'Kopi Espreso',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                       SizedBox(height: 5,),
+                      Container(
+                        width: 100,
+                        height: 30,
+                        color: Colors.blue,
+                        child: Center(
+                          child: Text(
+                            'Minuman Soda',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                       SizedBox(height: 5,),
+                      Container(
+                        width: 100,
+                        height: 30,
+                        color: Colors.blue,
+                        child: Center(
+                          child: Text(
+                            'Jus Tomat',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ],
